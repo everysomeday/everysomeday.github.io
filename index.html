@@ -1,21 +1,124 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title> Where it all happens </title >
-		</head>
-		<body>
-			<h1> Hi! </h1>
-			<p> There's really not much here. How did you even find this? You should let me know. </p>
-			<a href="https://everysomeday.github.io/General" >
-				Whaaaaaaaaaaaaaaaaaaaa??? </a>
-			<br>
-			<a href="https://everysomeday.github.io/General" style="display:inline-block;">
-				<img title="This is awful. Maybe that's okay." src="Sketch/Eni.png"
-				alt="Cat-like doodle."
-				width="325" height="420">
-			</a>
-			<p> Click the dumb image to be taken to a probably blank page that I made just to figure out how that stuff works! </p>
-			<h3> This website's a real piece of shit I masterfully crafted through years of work and minutes of finding what others have done and copying their work to show my artz, so that's what's coming up in the next version. Please look forward to it(tm). </h3>
-		</body>
-	</html>
+<html>
+<head>
+	<title> Gallery </title>
+	<meta charset="UTF-8" />
+	<style>		
+		.bg{
+			background-image: url('bg/tile.png');
+			background-position: center center; }
 
+		.border{
+			border-color: #454545;
+			border-radius: 14px;
+			border-style: solid;
+			border-width: 2px; }
+
+		.center{
+			text-align: center; }
+
+		.color{
+			background-color: #FFFFFF; }
+
+		.margin{
+			margin: auto; }
+
+		.padding{
+			padding: 16px; }
+			
+		.gallerypadding{
+			padding: 2px; }
+	</style>
+</head>
+<body class="bg">
+	<div class="header">
+		<th>
+			<div style="margin: auto;">
+			<br>
+			
+			</div>		
+		</th>
+	</div>
+<table class="color border margin padding">
+	<tr>
+		<td class="center">
+			<img src="welcome.png" width="750" height="200">
+			<br>
+			
+		<p style="font-family: Meiryo">
+			<font size="6" font color="ed5f7f"> <b> Welcome to my Gallery! </b> </font>
+			<br>
+			
+			<font size="4"> This is the spot for me to show off anything I make, regardless of it's quality. </font>
+			<br>
+			<br>
+			
+			<font size="2"> <b> 「Info」 </b>
+			<br>
+			At the time of writing, I started drawing exactly one week ago, on the 7th of March 2025, at the ripe age of 23.
+			<br>
+			I'm bad - very bad. But that's to be expected. I can only hope to get better.
+			<br>
+			Regardless, I've been enjoying drawing.
+			<br>
+			Oh, I also enjoy photography.
+			<br>
+			I'm bad at that as well. </font>
+			<br>
+			<br>
+			
+			<font size="2"> <b> 「Unimportant information」 </b>
+			<br>
+			Everything displayed on this site belongs to the creator, who will remain anonymous at this time. 
+			<br> 
+			You as the viewer are completely free to use anything found here for any reason, excluding commercial use. 
+			<br> 
+			Credit is appreciated but not neccessary. </font>
+			<br>
+		</p>
+		</td>
+	</tr>
+
+<table class="color border margin gallerypadding">
+	<tr>
+		<td class="center">
+			<img src="gallery.png" width="450" height="325">
+			<br>
+			
+			<font size="4"> <b> 「Click on the images for extras!」 </b> </font>
+			<br>
+			<hr>
+			
+			<img title="Eni" src="sketch/eni.png" alt="Cat-like doodle." width="300" height="450" onclick="document.getElementById('eni').showModal();">
+				<dialog id="eni" onclick="this.close()">
+					<div onclick="event.stopPropagation()">
+				<table width="800" border="0" cellspacing="4" cellpadding="0">
+					<tr>
+						<td width="100" valign="top">
+							<img src="sketch/eni.png" alt="Cat-like doodle." width="450" height="700">
+						</td>
+					<td valign="top">
+						<p style="font-family: Meiryo">
+							<b>Eni</b>
+							<br>
+							The first doodle to be added to the page.
+							<br>
+							It's something of a cat-like creature.
+							<br>
+							Just happy to be here.
+						</p>
+					</td>
+					</tr>
+				</table>
+			</dialog>
+			
+		
+		</td>
+	</tr>	
+
+
+
+
+
+</body>
+</html >
