@@ -1,6 +1,10 @@
 <!DOCTYPE html >
 <html >
 <head >
+<style >
+     h1{color: rgb(9, 82, 146) ;}
+     p{color: blue;}
+</style >
 <title > Page Title</title >
 </head >
 <body >
@@ -8,26 +12,5 @@
 <h1 > My First Heading</h1 >
 <p > My first paragraph.</p >
 
-
-
-
-
-
-
-<a href="https://everysomeday.github.io/General" >
-     Whaaaaaaaaaaaaaaaaaaaa
-</a >
-
-
-
-
-
-
 </body >
-
 </html >
-
-
-
-
-
