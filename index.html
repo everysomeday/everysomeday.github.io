@@ -29,6 +29,13 @@
 		.gallerypadding{
 			padding: 2px; }
 	</style>
+	<script>
+		function filter(category) {
+			var items = document.getElementsByClassName("image");
+			for (var i = 0; i < items.length; i++) {
+				if (category === "all" || items[i].getAttribute("data-category") === category) {items[i].style.display = "inline-block"; } 
+					else { items[i].style.display = "none"; } } }
+	</script>
 </head>
 <body class="bg">
 	<div class="header">
@@ -74,7 +81,6 @@
 			You as the viewer are completely free to use anything found here for any reason, excluding commercial use. 
 			<br> 
 			Credit is appreciated but not neccessary. </font>
-			<br>
 		</p>
 		</td>
 	</tr>
@@ -89,13 +95,24 @@
 			<br>
 			<hr>
 			
-			<img title="Eni" src="art/eni.png" alt="Cat-like doodle." width="300" height="450" onclick="document.getElementById('eni').showModal();">
+			<div style="text-align: left;">
+				<button style="background-color:#ff4073; border: none; color: #ffffff; padding: 4px 8px; font-size: 16px; margin: 2px 1px; cursor: pointer; border-radius: 12px;"
+					onclick="filter('all')">Everything</button>
+				<button style="background-color:#ff4073; border: none; color: #ffffff; padding: 4px 8px; font-size: 16px; margin: 2px 1px; cursor: pointer; border-radius: 12px;"
+					onclick="filter('art')">Art</button>
+				<button style="background-color:#ff4073; border: none; color: #ffffff; padding: 4px 8px; font-size: 16px; margin: 2px 1px; cursor: pointer; border-radius: 12px;"
+					onclick="filter('photo')">Photography</button>
+			</div>
+			
+			
+			<div class="image" data-category="art" style="display:inline-block; margin: 8px;">
+			<img title="Eni" src="art/eni.png" alt="Cat-like doodle" width="300" height="450" onclick="document.getElementById('eni').showModal();">
 				<dialog id="eni" onclick="this.close()">
 					<div onclick="event.stopPropagation()">
 				<table width="800" border="0" cellspacing="4" cellpadding="0">
 					<tr>
 						<td width="100" valign="top">
-							<img src="art/eni.png" alt="Cat-like doodle." width="450" height="700">
+							<img src="art/eni.png" alt="Cat-like doodle" width="450" height="700">
 						</td>
 					<td valign="top">
 						<p style="font-family: Meiryo">
@@ -110,9 +127,37 @@
 					</td>
 					</tr>
 				</table>
-			</dialog>
-			
-		
+					</div>
+				</dialog>
+			</div>
+				
+			<div class="image" data-category="photo" style="display:inline-block; margin: 8px;">
+			<img title="Amazon dome" src="photo/amazondome.jpg" alt="Amazon domes" width="350" height="450" onclick="document.getElementById('amazondome').showModal();">
+				<dialog id="amazondome" onclick="this.close()">
+					<div onclick="event.stopPropagation()">
+				<table width="800" border="0" cellspacing="4" cellpadding="0">
+					<tr>
+						<td width="100" valign="top">
+							<img src="photo/amazondome.jpg" alt="Amazon domes" width="450" height="700">
+						</td>
+					<td valign="top">
+						<p style="font-family: Meiryo">
+							<b>Amazon Domes</b>
+							<br>
+							These things always seem really silly.
+							<br>
+							But they make for pretty photos.
+						</p>
+					</td>
+					</tr>
+				</table>
+					</div>
+				</dialog>
+			</div>
+				
+				
+				
+				
 		</td>
 	</tr>	
 
